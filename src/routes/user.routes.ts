@@ -1,7 +1,7 @@
 
 import { FastifyInstance } from 'fastify';
 import { UserCreate } from '../interfaces/user.interface';
-import { UserUseCase } from '../usecases/user.usecse';
+import { UserUseCase } from '../usecases/user.usecase';
 
 
 export async function userRoutes(fastify: FastifyInstance) {
