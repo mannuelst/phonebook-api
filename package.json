@@ -1,5 +1,5 @@
 {
-  "name": "agenda-api",
+  "name": "phonebook-api",
   "version": "1.0.0",
   "description": "simples api de agendas de contactos",
   "type": "module",
