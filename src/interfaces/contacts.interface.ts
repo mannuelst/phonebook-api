@@ -5,3 +5,15 @@ export interface Contact {
     phone: string,
     userId: string
 }
+
+
+export interface ContactCrete {
+    name: string,
+    email: string,
+    phone: string,
+    userId: string
+}
+
+export interface ContactRepository {
+    create(data: ContactCrete): Promise<Contact>
+}
