@@ -24,3 +24,4 @@ class UserRepositoryPrisma implements UserRepository {
 
 }
 export { UserRepositoryPrisma };
+
