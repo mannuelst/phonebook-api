@@ -1,15 +1,21 @@
 
 import { FastifyInstance } from 'fastify';
 
+import { ContactCrete } from '../interfaces/contacts.interface';
 import { ContactUseCase } from '../usecases/contact.usecase';
 
 
 export async function contactRoutes(fastify: FastifyInstance) {
     const contactUseCase = new ContactUseCase()
-    fastify.post<{ Body: UserCreate }>('/', async (req, reply) => {
-        const { name, email } = req.body
+    fastify.post<{ Body: ContactCrete }>('/', async (req, reply) => {
+        const { name, email, phone, userId } = req.body
         try {
-            const data = await contactUseCase.create()
+            const data = await contactUseCase.create({
+                name,
+                email,
+                phone,
+                userId,
+            })
             return reply.send(data)
         } catch (error) {
 
