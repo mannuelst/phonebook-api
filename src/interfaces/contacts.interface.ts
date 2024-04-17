@@ -7,7 +7,13 @@ export interface Contact {
 }
 
 
-export interface ContactCrete {
+export interface ContactCreate {
+    name: string,
+    email: string,
+    phone: string,
+    userEmail: string
+}
+export interface ContactCreateData {
     name: string,
     email: string,
     phone: string,
@@ -15,5 +21,5 @@ export interface ContactCrete {
 }
 
 export interface ContactRepository {
-    create(data: ContactCrete): Promise<Contact>
-}
+    create(data: ContactCreateData): Promise<Contact>
+} 
