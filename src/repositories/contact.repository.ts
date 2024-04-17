@@ -4,14 +4,14 @@ export class ContactRepositoryPrisma implements ContactRepository {
     async create(data: ContactCreateData): Promise<Contact> {
         const result = await prisma.contact.create({
             data: {
-                email: data.email,
                 name: data.name,
+                email: data.email,
                 phone: data.phone,
                 userId: data.userId
             }
         })
-        return result
 
+        return result
     }
     async findByEmailOrPhone(email: string, phone: string): Promise<Contact | null> {
         const result = await prisma.contact.findFirst({
@@ -25,5 +25,16 @@ export class ContactRepositoryPrisma implements ContactRepository {
             }
         })
         return result || null
+    }
+    findAllContacts(userEmail: string): Promise<Contact[]> {
+        const result = await prisma.contact.findMany({
+            where: {
+                userId: userEmail
+
+
+            }
+        })
+        return result
+
     }
 }
