@@ -1,7 +1,7 @@
-import { Contact, ContactCrete, ContactRepository } from '../interfaces/contacts.interface';
 import { UserRepository } from '../interfaces/user.interface';
-import { ContactRepositoryPrisma } from '../repositories/contact.repository';
 import { UserRepositoryPrisma } from '../repositories/user.repository';
+import { Contact, ContactCrete, ContactRepository } from '../interfaces/contacts.interface';
+import { ContactRepositoryPrisma } from '../repositories/contact.repository';
 
 
 

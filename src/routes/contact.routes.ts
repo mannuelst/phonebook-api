@@ -3,7 +3,7 @@ import { FastifyInstance } from 'fastify';
 
 import { ContactCreate } from '../interfaces/contacts.interface';
 import { authMiddleware } from '../middleware/auth.middleware';
-import { ContactUseCase } from '../usecases/contact.usecase';
+import { ContactUseCase } from '../use-cases/contact.usecase';
 
 
 export async function contactRoutes(fastify: FastifyInstance) {
