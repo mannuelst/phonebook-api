@@ -20,7 +20,7 @@ export class ContactUseCase {
         }
         const contactExist = await this.contactRepository.findByEmailOrPhone(email, phone)
         if (contactExist) {
-            throw new Error('Contact already exists!')
+            throw new Error('Contact already exists')
         }
 
 
