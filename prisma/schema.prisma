@@ -23,9 +23,9 @@ model User {
 
 model Contact {
   id        String   @id @default(uuid())
-  nome      String
+  name      String
   email     String
-  telefone  String
+  phone     String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   user      User     @relation(fields: [userId], references: [id])

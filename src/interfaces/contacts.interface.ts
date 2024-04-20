@@ -24,4 +24,5 @@ export interface ContactRepository {
     create(data: ContactCreateData): Promise<Contact>
     findByEmailOrPhone(email: string, phone: string): Promise<Contact | null>
     findAllContacts(userEmail: string): Promise<Contact[]>
+    updateContact({ id, name, email, phone }: Contact): Promise<Contact>
 } 
