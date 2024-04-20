@@ -41,5 +41,9 @@ export class ContactUseCase {
         const data = await this.contactRepository.updateContact(id, name, email, phone)
         return data
     }
+    async delete(id: string) {
+        const data = await this.contactRepository.delete(id)
+        return data
+    }
 }
 
